@@ -1,3 +1,11 @@
+class Database:
+    def __init__(self):
+        self.data = {}
+
+    def add_user(self, username, password,):
+        self.data[username] = password
+
+
 class User:
     """ «Класс пользователя, содержащий атрибуты: 
     логин и пароль» 
@@ -7,17 +15,17 @@ class User:
         if password == password_confirm:
             self.password = password
 
-class Database:
-    def __init__(self):
-        self.data = {}
 
-    def add_user(self, username, password):
-        self.data[username] = password
+       
 
 if __name__ == '__main__':
     database = Database()
-    user = User(input('Введите логин: '), input('Введите пароль: '), input('Повторите пароль:'))
-    database.add_user(user.username, user.password)
-print(database.data)
+    while True:
+        choic = input('Выберите действие: \n1 - Вход\n2 - Регистрация\n')
+        user = User(input('Введите логин: '), password := input('Введите пароль: '), password2 := input('Повторите пароль:'))
+        if password != password2:
+            exit()
+        database.add_user(user.username, user.password)
+        print(database.data)
         
         
